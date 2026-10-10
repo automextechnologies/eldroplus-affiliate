@@ -6,6 +6,15 @@ import { useEffect } from "react";
 export default function PageEffects() {
   useEffect(() => {
     const els = document.querySelectorAll<HTMLElement>(".reveal");
+
+    // Reveal elements already in viewport immediately
+    els.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add("in");
+      }
+    });
+
     if (!("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("in"));
       return;
@@ -19,7 +28,7 @@ export default function PageEffects() {
             revealer.unobserve(en.target);
           }
         }),
-      { threshold: 0.12 }
+      { threshold: 0.05 }
     );
     els.forEach((el) => revealer.observe(el));
 

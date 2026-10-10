@@ -98,7 +98,7 @@ export default function AffiliateForm() {
     <div className="form-card reveal" id="join" ref={cardRef}>
       <div className="form-head">
         <p className="form-notice" lang="ml">
-          കൂടുതൽ വിവരങ്ങൾ അറിയുന്നതിനായി താഴെയുള്ള ഫോം സബ്മിറ്റ് ചെയ്യുക.
+          കൂടുതൽ വിവരങ്ങൾക്കായി ഫോൺ നമ്പർ നൽകി ഫോം സബ്മിറ്റ് ചെയ്യൂ.
         </p>
       </div>
 

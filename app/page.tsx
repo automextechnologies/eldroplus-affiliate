@@ -1,4 +1,5 @@
 import AffiliateForm from "./components/AffiliateForm";
+import BackgroundVideo from "./components/BackgroundVideo";
 import PageEffects from "./components/PageEffects";
 
 const SITE = "https://www.eldroplus.com";
@@ -10,15 +11,14 @@ export default function Home() {
         <div className="container header-inner">
           <a href={SITE} className="logo" id="header-logo-link" aria-label="Eldro+ home">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`${SITE}/assets/eldroplus_header_logo.png`} alt="Eldro+ logo" width={140} height={42} />
+            <img src="/img/eldropluswhite.png" alt="Eldro+ logo" width={150} height={51} />
           </a>
         </div>
       </header>
 
       <main className="landing-main">
         <section className="hero">
-          <div className="blob blob-1" aria-hidden="true" />
-          <div className="blob blob-2" aria-hidden="true" />
+          <BackgroundVideo />
 
           <div className="container hero-inner">
             <div className="hero-copy reveal">
